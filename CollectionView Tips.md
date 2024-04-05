@@ -1,6 +1,10 @@
 # CollectionView Tips
 
-### 一 collectionview 的几种视图
+## 零 目录
+
+[TOC]
+
+## 一 collectionview 的几种视图
 
 - CollectionviewCell
 
@@ -9,7 +13,7 @@
   - footerView
 - DecorationView
 
-### 二 自定义`section headerView`或`section footerview`
+## 二 自定义`section headerView`或`section footerview`
 
 1. 注册：`register(_:forSupplementaryViewOfKind:withReuseIdentifier:)`
 2. 实现：继承`UICollectionReusableView`
@@ -55,7 +59,7 @@ if kind == UICollectionView.elementKindSectionHeader {
     optional func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize
 ```
 
-### 三 collectionview 使用 流式布局的 viewDelegate 用UICollectionViewDelegateFlowLayout
+## 三 collectionview 使用 流式布局的 viewDelegate 用UICollectionViewDelegateFlowLayout
 
 不要使用UICollectionViewDelegate，而是继承UICollectionViewDelegate的UICollectionViewDelegateFlowLayout
 
@@ -78,4 +82,10 @@ if kind == UICollectionView.elementKindSectionHeader {
     @available(iOS 6.0, *)
     optional func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize
 ```
+
+
+
+## 四 参考
+
+> https://github.com/freesky2046/Make/tree/master/CollectionDemo/CollectionViewTips
 
