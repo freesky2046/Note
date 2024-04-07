@@ -63,6 +63,8 @@ if kind == UICollectionView.elementKindSectionHeader {
 
 不要使用UICollectionViewDelegate，而是继承UICollectionViewDelegate的UICollectionViewDelegateFlowLayout
 
+获取item尺寸，collectionviewInset ，行间距，列间距，头尺寸，尾尺寸
+
 ```swift
     @available(iOS 8.0, *)
     optional func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
