@@ -71,13 +71,13 @@
 - `  public convenience init(forSupplementaryViewOfKind elementKind: String, with indexPath: IndexPath)`
 - `public convenience init(forDecorationViewOfKind decorationViewKind: String, with indexPath: IndexPath)`
 
-⚠️⚠️ 调用初始化方法的时候可以省去 init。
+⚠️⚠️ 调用初始化方法的时候可以省去` init`。
 
 
 
 ### 三 实战
 
-自定义layout需要collectionvew和datasource的能力
+自定义layout需要`collectionvew`和`datasource`的能力
 
 一 collectionview为layout提供以下能力
 
