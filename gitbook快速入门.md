@@ -1,6 +1,6 @@
+[TOC]
 
-
-### 安装
+## 安装
 
 1. 安装 [Node.js](https://nodejs.org/)
 
@@ -10,7 +10,7 @@
    npm install gitbook-cli -g
    ```
 
-####  基本使用
+##  基本使用
 
 1.`gitbook init` 初始化书籍目录
 
@@ -20,31 +20,37 @@
 
 > 注: `gitbook serve` 命令实际上会首先调用 `gitbook build` 编译书籍，完成以后会打开一个 web 服务器，监听在本地的 4000 端口
 
-### 简单书写
+## 简单书写
+
+- 参考 `>`,多行参考`>>`
+- 代码段 `option + command + c`
+- 链接`[描述](地址)`
+- 图片`！[描述](地址)`
+- 行内代码 ``
+
+## 插件
 
 
 
-### 插件
+## 部署到 github
 
 
 
-### 部署到 github
+## 部署到 coding
 
 
 
-### 部署到 coding
+## 购买 VPS
 
 
 
-### 购买 VPS
-
-
-
-### 讲电子书部署到 VPS
+## 讲电子书部署到 VPS
 
 
 
 ------
+
+## 参考
 
 > [gitbook教程](https://www.youtube.com/playlist?list=PLmZFYB4M42syjBdTUdUg6HBikXx1xTVQf)
 >

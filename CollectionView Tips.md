@@ -30,6 +30,8 @@
 
 #### 3.创建实例的时候就算只创建`header` 也得写 `footer`
 
+因为 这个在一个函数的里面返回，`if`后面必须跟着 `else`
+
 ```swift
 func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 
@@ -60,6 +62,8 @@ if kind == UICollectionView.elementKindSectionHeader {
 ## 三 collectionview 使用 流式布局的 viewDelegate 用UICollectionViewDelegateFlowLayout
 
 不要使用UICollectionViewDelegate，而是继承UICollectionViewDelegate的UICollectionViewDelegateFlowLayout
+
+获取item尺寸，collectionviewInset ，行间距，列间距，头尺寸，尾尺寸
 
 ```swift
     @available(iOS 8.0, *)
