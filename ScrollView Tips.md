@@ -1,4 +1,10 @@
-#### `contentOffset`如何理解
+[TOC]
+
+
+
+
+
+## `contentOffset`如何理解
 
 ![图片](https://i.stack.imgur.com/oCKJr.png#pic_left)
 
@@ -32,9 +38,34 @@ var contentOffset: CGPoint {
 
 
 
-#### `contentInset`如何理解
+## `contentInset`如何理解
 
 ![contentInset](https://developer.apple.com/library/archive/documentation/WindowsViews/Conceptual/UIScrollView_pg/Art/contentSize_contentInset.jpg)
 
 - 不占用 contentsize 的空间
 - 会让 bounds.orign 为负数
+
+
+
+## 如何判断左滑还是右滑
+
+```objective-c
+// somewhere in the private class extension
+@property (nonatomic, assign) CGFloat lastContentOffset;
+
+// somewhere in the class implementation
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+
+    ScrollDirection scrollDirection;
+
+    if (self.lastContentOffset > scrollView.contentOffset.x) {
+        scrollDirection = ScrollDirectionRight;
+    } else if (self.lastContentOffset < scrollView.contentOffset.x) {
+        scrollDirection = ScrollDirectionLeft;
+    }
+
+    self.lastContentOffset = scrollView.contentOffset.x;
+
+    // do whatever you need to with scrollDirection here.    
+}
+```
