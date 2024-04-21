@@ -49,6 +49,8 @@ if kind == UICollectionView.elementKindSectionHeader {
 
 ```
 
+可以注册的时候直接注册为`UICollectionReusableView`类,使用系统的类可以少写一个文件
+
 #### 4.设定尺寸的两种方式
 
    若全部尺寸一样且初始化的时候就可以决定可以直接使用layout的`headerReferenceSize`或`footerReferenceSize`否则要使用

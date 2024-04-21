@@ -1,4 +1,8 @@
-#### `contentOffset`如何理解
+# ScrollView Tips
+
+[TOC]
+
+## `contentOffset`如何理解
 
 ![图片](https://i.stack.imgur.com/oCKJr.png#pic_left)
 
@@ -32,9 +36,9 @@ var contentOffset: CGPoint {
 
 
 
-#### `contentInset`如何理解
+## `contentInset`如何理解
 
 ![contentInset](https://developer.apple.com/library/archive/documentation/WindowsViews/Conceptual/UIScrollView_pg/Art/contentSize_contentInset.jpg)
 
 - 不占用 contentsize 的空间
-- 会让 bounds.orign 为负数
+- 会让 bounds.orign 为负数，可视区域初始位置默认总在左上角

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>gitbook快速入门 · GitBook</title>
+        <title>ScrollView Tips · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="ScrollView Tips.html" />
+    <link rel="next" href="UIView Animations.md" />
     
     
-    <link rel="prev" href="CollectionView Tips.html" />
+    <link rel="prev" href="gitbook快速入门.html" />
     
 
     </head>
@@ -128,7 +128,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4" data-path="gitbook快速入门.html">
+        <li class="chapter " data-level="1.4" data-path="gitbook快速入门.html">
             
                 <a href="gitbook快速入门.html">
             
@@ -141,7 +141,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="ScrollView Tips.html">
+        <li class="chapter active" data-level="1.5" data-path="ScrollView Tips.html">
             
                 <a href="ScrollView Tips.html">
             
@@ -249,7 +249,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >gitbook快速入门</a>
+        <a href="." >ScrollView Tips</a>
     </h1>
 </div>
 
@@ -264,46 +264,38 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>[TOC]</p>
-<h2 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h2>
-<ol>
-<li><p>&#x5B89;&#x88C5; <a href="https://nodejs.org/" target="_blank">Node.js</a></p>
-</li>
-<li><p>&#x901A;&#x8FC7; npm &#x6765;&#x5B89;&#x88C5; gitbook</p>
-<pre><code>npm install gitbook-cli -g
-</code></pre></li>
-</ol>
-<h2 id="&#x57FA;&#x672C;&#x4F7F;&#x7528;">&#x57FA;&#x672C;&#x4F7F;&#x7528;</h2>
-<p>1.<code>gitbook init</code> &#x521D;&#x59CB;&#x5316;&#x4E66;&#x7C4D;&#x76EE;&#x5F55;</p>
-<blockquote>
-<p><code>README.md</code> &#x548C; <code>SUMMARY.md</code> &#x662F;&#x4E24;&#x4E2A;&#x5FC5;&#x987B;&#x6587;&#x4EF6;, <code>README.md</code> &#x662F;&#x5BF9;&#x4E66;&#x7C4D;&#x7684;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;, <code>SUMMARY.md</code> &#x662F;&#x4E66;&#x7C4D;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;</p>
-</blockquote>
-<p>2.<code>gitbook serve</code> &#x7F16;&#x8BD1;&#x548C;&#x9884;&#x89C8;&#x4E66;&#x7C4D;</p>
-<blockquote>
-<p>&#x6CE8;: <code>gitbook serve</code> &#x547D;&#x4EE4;&#x5B9E;&#x9645;&#x4E0A;&#x4F1A;&#x9996;&#x5148;&#x8C03;&#x7528; <code>gitbook build</code> &#x7F16;&#x8BD1;&#x4E66;&#x7C4D;&#xFF0C;&#x5B8C;&#x6210;&#x4EE5;&#x540E;&#x4F1A;&#x6253;&#x5F00;&#x4E00;&#x4E2A; web &#x670D;&#x52A1;&#x5668;&#xFF0C;&#x76D1;&#x542C;&#x5728;&#x672C;&#x5730;&#x7684; 4000 &#x7AEF;&#x53E3;</p>
-</blockquote>
-<h2 id="&#x7B80;&#x5355;&#x4E66;&#x5199;">&#x7B80;&#x5355;&#x4E66;&#x5199;</h2>
+                                <h1 id="scrollview-tips">ScrollView Tips</h1>
+<p>[TOC]</p>
+<h2 id="contentoffset&#x5982;&#x4F55;&#x7406;&#x89E3;"><code>contentOffset</code>&#x5982;&#x4F55;&#x7406;&#x89E3;</h2>
+<p><img src="https://i.stack.imgur.com/oCKJr.png#pic_left" alt="&#x56FE;&#x7247;"></p>
+<p>&#x8FD9;&#x91CC;&#x6709;&#x4E24;&#x4E2A;&#x77E9;&#x5F62;</p>
 <ul>
-<li>&#x53C2;&#x8003; <code>&gt;</code>,&#x591A;&#x884C;&#x53C2;&#x8003;<code>&gt;&gt;</code></li>
-<li>&#x4EE3;&#x7801;&#x6BB5; <code>option + command + c</code></li>
-<li>&#x94FE;&#x63A5;<code>[&#x63CF;&#x8FF0;](&#x5730;&#x5740;)</code></li>
-<li>&#x56FE;&#x7247;<code>&#xFF01;[&#x63CF;&#x8FF0;](&#x5730;&#x5740;)</code><ul>
-<li>&#x56FE;&#x7247;&#x5C45;&#x5DE6;&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x5E38;&#x89C1;&#x7684;&#x9700;&#x6C42;</li>
-</ul>
+<li><p>&#x53EF;&#x89C6;&#x533A;&#x57DF;</p>
 </li>
-<li>&#x884C;&#x5185;&#x4EE3;&#x7801; ``</li>
+<li><p>&#x5168;&#x90E8;&#x533A;&#x57DF;</p>
+</li>
 </ul>
-<h2 id="&#x63D2;&#x4EF6;">&#x63D2;&#x4EF6;</h2>
-<h2 id="&#x90E8;&#x7F72;&#x5230;-github">&#x90E8;&#x7F72;&#x5230; github</h2>
-<h2 id="&#x90E8;&#x7F72;&#x5230;-coding">&#x90E8;&#x7F72;&#x5230; coding</h2>
-<h2 id="&#x8D2D;&#x4E70;-vps">&#x8D2D;&#x4E70; VPS</h2>
-<h2 id="&#x8BB2;&#x7535;&#x5B50;&#x4E66;&#x90E8;&#x7F72;&#x5230;-vps">&#x8BB2;&#x7535;&#x5B50;&#x4E66;&#x90E8;&#x7F72;&#x5230; VPS</h2>
-<hr>
-<h2 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h2>
-<blockquote>
-<p><a href="https://www.youtube.com/playlist?list=PLmZFYB4M42syjBdTUdUg6HBikXx1xTVQf" target="_blank">gitbook&#x6559;&#x7A0B;</a></p>
-<p><a href="https://developer.aliyun.com/article/942364" target="_blank">TypeError: cb.apply is not a function</a></p>
-</blockquote>
+<p>&#x6EDA;&#x52A8;&#x662F;&#x6539;&#x53D8;&#x53EF;&#x89C1;&#x533A;&#x57DF;&#x5728;&#x6574;&#x4E2A;&#x533A;&#x57DF;&#x4E2D;&#x7684;&#x8D77;&#x70B9;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>&#x6240;&#x6709;&#x7684;&#x89C6;&#x56FE;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x7531;view.bounds&#x77E9;&#x5F62;&#x8868;&#x793A;&#x7684;&#x53EF;&#x89C1;&#x533A;&#x57DF;&#x3002;UIScrollView&#x7C7B;&#x662F;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x72EC;&#x7279;&#x5C5E;&#x6027;&#x7684;&#x89C6;&#x56FE;&#xFF1A;&#x5B83;&#x6709;&#x4E00;&#x4E2A;&#x6BD4;&#x5176;&#x8FB9;&#x754C;&#x66F4;&#x5927;&#x7684;&#x77E9;&#x5F62;&#xFF0C;&#x79F0;&#x4E3A;&quot;content view&quot;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5728;&#x6EDA;&#x52A8;&#x89C6;&#x56FE;&#x4E2D;&#xFF1A;</p>
+<p>&#x53EF;&#x89C1;&#x533A;&#x57DF;&#x662F;scrollView.bounds&#xFF1B;
+&#x603B;&#x533A;&#x57DF;&#x88AB;&#x79F0;&#x4E3A;content view&#xFF0C;&#x5176;&#x5927;&#x5C0F;&#x4E3A;scrollView.contentSize&#xFF1B;</p>
+<p><strong>contentOffset&#x662F;scrollView.bounds.origin&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x540D;&#x79F0;</strong></p>
+<pre><code class="lang-swift"><span class="hljs-keyword">var</span> contentOffset: <span class="hljs-type">CGPoint</span> { 
+    <span class="hljs-keyword">get</span> { <span class="hljs-keyword">return</span> bounds.origin }
+    <span class="hljs-keyword">set</span> {
+        <span class="hljs-keyword">var</span> bounds = <span class="hljs-keyword">self</span>.bounds
+        bounds.origin = newValue
+        <span class="hljs-keyword">self</span>.bounds = bounds
+    }   
+}
+</code></pre>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x4EE5;&#x7F16;&#x7A0B;&#x65B9;&#x5F0F;&#x66F4;&#x6539;contentOffset&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x5728;&#x6539;&#x53D8;bounds.origin&#xFF0C;&#x8FD9;&#x4F1A;&#x5BFC;&#x81F4;&#x4E0D;&#x540C;&#x533A;&#x57DF;&#x7684;content view&#x88AB;&#x6E32;&#x67D3;&#x51FA;&#x6765;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;<code>setContentOffset(pt, animated: true)</code>&#x6765;&#x5BF9;&#x6B64;&#x66F4;&#x6539;&#x8FDB;&#x884C;&#x52A8;&#x753B;&#x5904;&#x7406;&#xFF0C;scrollView&#x4F1A;&#x5448;&#x73B0;&#x51FA;&#x7C7B;&#x4F3C;&#x7528;&#x6237;&#x7528;&#x624B;&#x6307;&#x62D6;&#x52A8;&#x6EDA;&#x52A8;&#x7684;&#x6548;&#x679C;</p>
+<h2 id="contentinset&#x5982;&#x4F55;&#x7406;&#x89E3;"><code>contentInset</code>&#x5982;&#x4F55;&#x7406;&#x89E3;</h2>
+<p><img src="https://developer.apple.com/library/archive/documentation/WindowsViews/Conceptual/UIScrollView_pg/Art/contentSize_contentInset.jpg" alt="contentInset"></p>
+<ul>
+<li>&#x4E0D;&#x5360;&#x7528; contentsize &#x7684;&#x7A7A;&#x95F4;</li>
+<li>&#x4F1A;&#x8BA9; bounds.orign &#x4E3A;&#x8D1F;&#x6570;&#xFF0C;&#x53EF;&#x89C6;&#x533A;&#x57DF;&#x521D;&#x59CB;&#x4F4D;&#x7F6E;&#x9ED8;&#x8BA4;&#x603B;&#x5728;&#x5DE6;&#x4E0A;&#x89D2;</li>
+</ul>
 
                                 
                                 </section>
@@ -331,12 +323,12 @@
 
             
                 
-                <a href="CollectionView Tips.html" class="navigation navigation-prev " aria-label="Previous page: CollectionView Tips">
+                <a href="gitbook快速入门.html" class="navigation navigation-prev " aria-label="Previous page: gitbook快速入门">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="ScrollView Tips.html" class="navigation navigation-next " aria-label="Next page: ScrollView Tips">
+                <a href="UIView Animations.md" class="navigation navigation-next " aria-label="Next page: UIView Animations">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -347,7 +339,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"gitbook快速入门","level":"1.4","depth":1,"next":{"title":"ScrollView Tips","level":"1.5","depth":1,"path":"ScrollView Tips.md","ref":"ScrollView Tips.md","articles":[]},"previous":{"title":"CollectionView Tips","level":"1.3","depth":1,"path":"CollectionView Tips.md","ref":"CollectionView Tips.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"gitbook快速入门.md","mtime":"2024-04-10T14:40:20.750Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-04-21T11:39:30.554Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ScrollView Tips","level":"1.5","depth":1,"next":{"title":"UIView Animations","level":"1.6","depth":1,"path":"UIView Animations.md","ref":"UIView Animations.md","articles":[]},"previous":{"title":"gitbook快速入门","level":"1.4","depth":1,"path":"gitbook快速入门.md","ref":"gitbook快速入门.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ScrollView Tips.md","mtime":"2024-04-21T02:10:28.492Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-04-21T11:39:30.554Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
