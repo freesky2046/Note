@@ -1,4 +1,4 @@
-# ScrollView Tips
+## ScrollView Tips1  关键属性
 
 [TOC]
 
@@ -41,4 +41,4 @@ var contentOffset: CGPoint {
 ![contentInset](https://developer.apple.com/library/archive/documentation/WindowsViews/Conceptual/UIScrollView_pg/Art/contentSize_contentInset.jpg)
 
 - 不占用 contentsize 的空间
-- 会让 bounds.orign 为负数，可视区域初始位置默认总在左上角
+- 会让 bounds.orign 为负数，即全部区域外添加了一个边框。坐标系原点还是在全部区域的左上角。

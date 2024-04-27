@@ -28,8 +28,6 @@
 
 #### 2.实现的时候继承的类是：`UICollectionReusableView`
 
-  
-
 #### 3.创建实例的时候就算只创建`header` 也得写 `footer`
 
 因为 这个在一个函数的里面返回，`if`后面必须跟着 `else`

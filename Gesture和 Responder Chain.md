@@ -1,0 +1,10 @@
+## Gesture和Responder Chain
+
+## 
+
+
+
+
+
+
+
