@@ -141,6 +141,84 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5" data-path="ScrollView Tips.html">
+            
+                <a href="ScrollView Tips.html">
+            
+                    
+                    ScrollView Tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="UIView Animations.md">
+            
+                <span>
+            
+                    
+                    UIView Animations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="UITableView Tips">
+            
+                <span>
+            
+                    
+                    UITableView Tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="UUID 知识">
+            
+                <span>
+            
+                    
+                    UUID 知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    读JXSegmentedView
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="钥匙串">
+            
+                <span>
+            
+                    
+                    KeyChain
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -187,7 +265,9 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="collectionview-tips">CollectionView Tips</h1>
-<h3 id="&#x4E00;-collectionview-&#x7684;&#x51E0;&#x79CD;&#x89C6;&#x56FE;">&#x4E00; collectionview &#x7684;&#x51E0;&#x79CD;&#x89C6;&#x56FE;</h3>
+<h2 id="&#x96F6;-&#x76EE;&#x5F55;">&#x96F6; &#x76EE;&#x5F55;</h2>
+<p>[TOC]</p>
+<h2 id="&#x4E00;-collectionview-&#x7684;&#x51E0;&#x79CD;&#x89C6;&#x56FE;">&#x4E00; collectionview &#x7684;&#x51E0;&#x79CD;&#x89C6;&#x56FE;</h2>
 <ul>
 <li><p>CollectionviewCell</p>
 </li>
@@ -199,7 +279,7 @@
 </li>
 <li>DecorationView</li>
 </ul>
-<h3 id="&#x4E8C;-&#x81EA;&#x5B9A;&#x4E49;section-headerview&#x6216;section-footerview">&#x4E8C; &#x81EA;&#x5B9A;&#x4E49;<code>section headerView</code>&#x6216;<code>section footerview</code></h3>
+<h2 id="&#x4E8C;-&#x81EA;&#x5B9A;&#x4E49;section-headerview&#x6216;section-footerview">&#x4E8C; &#x81EA;&#x5B9A;&#x4E49;<code>section headerView</code>&#x6216;<code>section footerview</code></h2>
 <ol>
 <li>&#x6CE8;&#x518C;&#xFF1A;<code>register(_:forSupplementaryViewOfKind:withReuseIdentifier:)</code></li>
 <li>&#x5B9E;&#x73B0;&#xFF1A;&#x7EE7;&#x627F;<code>UICollectionReusableView</code></li>
@@ -211,6 +291,7 @@
 <p><code>UICollectionView.elementKindSectionFooter</code></p>
 <h4 id="2&#x5B9E;&#x73B0;&#x7684;&#x65F6;&#x5019;&#x7EE7;&#x627F;&#x7684;&#x7C7B;&#x662F;&#xFF1A;uicollectionreusableview">2.&#x5B9E;&#x73B0;&#x7684;&#x65F6;&#x5019;&#x7EE7;&#x627F;&#x7684;&#x7C7B;&#x662F;&#xFF1A;<code>UICollectionReusableView</code></h4>
 <h4 id="3&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x7B97;&#x53EA;&#x521B;&#x5EFA;header-&#x4E5F;&#x5F97;&#x5199;-footer">3.&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x7B97;&#x53EA;&#x521B;&#x5EFA;<code>header</code> &#x4E5F;&#x5F97;&#x5199; <code>footer</code></h4>
+<p>&#x56E0;&#x4E3A; &#x8FD9;&#x4E2A;&#x5728;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x91CC;&#x9762;&#x8FD4;&#x56DE;&#xFF0C;<code>if</code>&#x540E;&#x9762;&#x5FC5;&#x987B;&#x8DDF;&#x7740; <code>else</code></p>
 <pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">collectionView</span><span class="hljs-params">(<span class="hljs-number">_</span> collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath)</span></span> -&gt; <span class="hljs-type">UICollectionReusableView</span> {
 
 <span class="hljs-keyword">if</span> kind == <span class="hljs-type">UICollectionView</span>.elementKindSectionHeader {
@@ -222,6 +303,7 @@
 
 }
 </code></pre>
+<p>&#x53EF;&#x4EE5;&#x6CE8;&#x518C;&#x7684;&#x65F6;&#x5019;&#x76F4;&#x63A5;&#x6CE8;&#x518C;&#x4E3A;<code>UICollectionReusableView</code>&#x7C7B;,&#x4F7F;&#x7528;&#x7CFB;&#x7EDF;&#x7684;&#x7C7B;&#x53EF;&#x4EE5;&#x5C11;&#x5199;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;</p>
 <h4 id="4&#x8BBE;&#x5B9A;&#x5C3A;&#x5BF8;&#x7684;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;">4.&#x8BBE;&#x5B9A;&#x5C3A;&#x5BF8;&#x7684;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;</h4>
 <p>   &#x82E5;&#x5168;&#x90E8;&#x5C3A;&#x5BF8;&#x4E00;&#x6837;&#x4E14;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x53EF;&#x4EE5;&#x51B3;&#x5B9A;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;layout&#x7684;<code>headerReferenceSize</code>&#x6216;<code>footerReferenceSize</code>&#x5426;&#x5219;&#x8981;&#x4F7F;&#x7528;</p>
 <pre><code class="lang-swift">   <span class="hljs-meta">@available</span>(iOS <span class="hljs-number">6.0</span>, *)
@@ -230,8 +312,9 @@
     <span class="hljs-meta">@available</span>(iOS <span class="hljs-number">6.0</span>, *)
     <span class="hljs-keyword">optional</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">collectionView</span><span class="hljs-params">(<span class="hljs-number">_</span> collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int)</span></span> -&gt; <span class="hljs-type">CGSize</span>
 </code></pre>
-<h3 id="&#x4E09;-collectionview-&#x4F7F;&#x7528;-&#x6D41;&#x5F0F;&#x5E03;&#x5C40;&#x7684;-viewdelegate-&#x7528;uicollectionviewdelegateflowlayout">&#x4E09; collectionview &#x4F7F;&#x7528; &#x6D41;&#x5F0F;&#x5E03;&#x5C40;&#x7684; viewDelegate &#x7528;UICollectionViewDelegateFlowLayout</h3>
+<h2 id="&#x4E09;-collectionview-&#x4F7F;&#x7528;-&#x6D41;&#x5F0F;&#x5E03;&#x5C40;&#x7684;-viewdelegate-&#x7528;uicollectionviewdelegateflowlayout">&#x4E09; collectionview &#x4F7F;&#x7528; &#x6D41;&#x5F0F;&#x5E03;&#x5C40;&#x7684; viewDelegate &#x7528;UICollectionViewDelegateFlowLayout</h2>
 <p>&#x4E0D;&#x8981;&#x4F7F;&#x7528;UICollectionViewDelegate&#xFF0C;&#x800C;&#x662F;&#x7EE7;&#x627F;UICollectionViewDelegate&#x7684;UICollectionViewDelegateFlowLayout</p>
+<p>&#x83B7;&#x53D6;item&#x5C3A;&#x5BF8;&#xFF0C;collectionviewInset &#xFF0C;&#x884C;&#x95F4;&#x8DDD;&#xFF0C;&#x5217;&#x95F4;&#x8DDD;&#xFF0C;&#x5934;&#x5C3A;&#x5BF8;&#xFF0C;&#x5C3E;&#x5C3A;&#x5BF8;</p>
 <pre><code class="lang-swift">    <span class="hljs-meta">@available</span>(iOS <span class="hljs-number">8.0</span>, *)
     <span class="hljs-keyword">optional</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">collectionView</span><span class="hljs-params">(<span class="hljs-number">_</span> collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath)</span></span> -&gt; <span class="hljs-type">CGSize</span>
 
@@ -250,6 +333,10 @@
     <span class="hljs-meta">@available</span>(iOS <span class="hljs-number">6.0</span>, *)
     <span class="hljs-keyword">optional</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">collectionView</span><span class="hljs-params">(<span class="hljs-number">_</span> collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int)</span></span> -&gt; <span class="hljs-type">CGSize</span>
 </code></pre>
+<h2 id="&#x56DB;-&#x53C2;&#x8003;">&#x56DB; &#x53C2;&#x8003;</h2>
+<blockquote>
+<p><a href="https://github.com/freesky2046/Make/tree/master/CollectionDemo/CollectionViewTips" target="_blank">https://github.com/freesky2046/Make/tree/master/CollectionDemo/CollectionViewTips</a></p>
+</blockquote>
 
                                 
                                 </section>
@@ -293,7 +380,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"CollectionView Tips","level":"1.3","depth":1,"next":{"title":"gitbook快速入门","level":"1.4","depth":1,"path":"gitbook快速入门.md","ref":"gitbook快速入门.md","articles":[]},"previous":{"title":"CollectionView实现复杂布局","level":"1.2","depth":1,"path":"CollectionView实现复杂布局.md","ref":"CollectionView实现复杂布局.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"CollectionView Tips.md","mtime":"2024-04-05T13:38:37.786Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-04-05T13:45:59.910Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"CollectionView Tips","level":"1.3","depth":1,"next":{"title":"gitbook快速入门","level":"1.4","depth":1,"path":"gitbook快速入门.md","ref":"gitbook快速入门.md","articles":[]},"previous":{"title":"CollectionView实现复杂布局","level":"1.2","depth":1,"path":"CollectionView实现复杂布局.md","ref":"CollectionView实现复杂布局.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"CollectionView Tips.md","mtime":"2024-04-21T02:14:15.015Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-04-21T11:39:30.554Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

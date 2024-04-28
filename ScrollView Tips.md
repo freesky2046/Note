@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 [TOC]
 
 
 
 
 
+=======
+# ScrollView Tips
+
+[TOC]
+
+>>>>>>> d0720625d44bc0b47b0df338622714eb13e847ec
 ## `contentOffset`如何理解
 
 ![图片](https://i.stack.imgur.com/oCKJr.png#pic_left)
@@ -43,6 +50,7 @@ var contentOffset: CGPoint {
 ![contentInset](https://developer.apple.com/library/archive/documentation/WindowsViews/Conceptual/UIScrollView_pg/Art/contentSize_contentInset.jpg)
 
 - 不占用 contentsize 的空间
+<<<<<<< HEAD
 - 会让 bounds.orign 为负数
 
 
@@ -69,3 +77,6 @@ var contentOffset: CGPoint {
     // do whatever you need to with scrollDirection here.    
 }
 ```
+=======
+- 会让 bounds.orign 为负数，可视区域初始位置默认总在左上角
+>>>>>>> d0720625d44bc0b47b0df338622714eb13e847ec
