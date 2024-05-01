@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-[TOC]
-
-
-
-
-
-=======
-# ScrollView Tips
+## ScrollView Tips1  关键属性
 
 [TOC]
 
->>>>>>> d0720625d44bc0b47b0df338622714eb13e847ec
 ## `contentOffset`如何理解
 
 ![图片](https://i.stack.imgur.com/oCKJr.png#pic_left)
@@ -50,33 +41,4 @@ var contentOffset: CGPoint {
 ![contentInset](https://developer.apple.com/library/archive/documentation/WindowsViews/Conceptual/UIScrollView_pg/Art/contentSize_contentInset.jpg)
 
 - 不占用 contentsize 的空间
-<<<<<<< HEAD
-- 会让 bounds.orign 为负数
-
-
-
-## 如何判断左滑还是右滑
-
-```objective-c
-// somewhere in the private class extension
-@property (nonatomic, assign) CGFloat lastContentOffset;
-
-// somewhere in the class implementation
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-
-    ScrollDirection scrollDirection;
-
-    if (self.lastContentOffset > scrollView.contentOffset.x) {
-        scrollDirection = ScrollDirectionRight;
-    } else if (self.lastContentOffset < scrollView.contentOffset.x) {
-        scrollDirection = ScrollDirectionLeft;
-    }
-
-    self.lastContentOffset = scrollView.contentOffset.x;
-
-    // do whatever you need to with scrollDirection here.    
-}
-```
-=======
-- 会让 bounds.orign 为负数，可视区域初始位置默认总在左上角
->>>>>>> d0720625d44bc0b47b0df338622714eb13e847ec
+- 会让 bounds.orign 为负数，即全部区域外添加了一个边框。坐标系原点还是在全部区域的左上角。

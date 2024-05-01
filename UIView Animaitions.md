@@ -11,7 +11,7 @@
 
 ## UIView动画
 
-`UIView.animate`的一簇api
+，`UIView.animate`的一簇api 即可
 
 注意可以设置**循环**，**反向**
 
@@ -123,9 +123,11 @@ anim.delegate = self;
 }
 ```
 
+### 参考
+
+[Core Animation(核心动画) 中KeyPath的取值](https://www.jianshu.com/p/71c880498d7a)
 
 
-> [Core Animation(核心动画) 中KeyPath的取值](https://www.jianshu.com/p/71c880498d7a)
 
 
 

@@ -26,7 +26,7 @@
 
 `UICollectionView.elementKindSectionFooter`
 
-#### 2.实现的时候继承的类是：`UICollectionReusableView`  
+#### 2.实现的时候继承的类是：`UICollectionReusableView`
 
 #### 3.创建实例的时候就算只创建`header` 也得写 `footer`
 
