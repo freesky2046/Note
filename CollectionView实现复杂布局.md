@@ -35,8 +35,8 @@
 
 在布局过程中，集合视图调用布局对象的特定方法。通过这些方法，您可以计算项目的位置，并为集合视图提供所需的主要信息。也可以调用其他方法，但这些方法总是在布局过程中按以下顺序调用:
 
-1. 使用 `prepareLayout` 方法执行提供布局信息所需的前期计算。
-2. 使用 `collectionViewContentSize` 方法根据初始计算返回整个内容区域的总体大小。
+1. 使用 `prepareLayout` 方法执行提供布局信息所需的**前期计算**。
+2. 使用 `collectionViewContentSize` 方法根据初始计算返回整个内容区域的**总体大小**。
 3. 使用 `layoutAttributesForElementsInRect:` 方法返回**指定矩形**中的单元格和视图的属性。
 
 

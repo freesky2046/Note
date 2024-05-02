@@ -78,6 +78,8 @@ pan.location(in: pan.view)
 
 ### 播放进度条
 
+见 [ProgressView](ProgressView.md)
+
 
 
 ## 参考
