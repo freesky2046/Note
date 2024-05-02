@@ -1,6 +1,4 @@
-## Gesture和Responder Chain
-
-## 
+## Responder Chain
 
 
 
