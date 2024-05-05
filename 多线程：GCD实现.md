@@ -223,6 +223,32 @@ let concurrentQueue = DispatchQueue(label: "com.example.concurrentQueue", attrib
 
 - 异步提交到自定义并行队列或预置并行队列----->开启多个线程
 
+```swift
+   func asyncConcurrent() {
+        let queue = DispatchQueue(label: "com.example.concurrent", attributes: .concurrent)
+        for _ in 0..<10 {
+            queue.async {
+                var j = 0
+                for i in 0..<1000 {
+                    j += 1
+                }
+                print("异步提交到并行队列\(Thread.current)")
+            }
+        }
+    }
+
+异步提交到并行队列<NSThread: 0x6000017372c0>{number = 6, name = (null)}
+异步提交到并行队列<NSThread: 0x60000174c240>{number = 4, name = (null)}
+异步提交到并行队列<NSThread: 0x600001746800>{number = 8, name = (null)}
+异步提交到并行队列<NSThread: 0x600001749280>{number = 5, name = (null)}
+异步提交到并行队列<NSThread: 0x600001737bc0>{number = 3, name = (null)}
+异步提交到并行队列<NSThread: 0x600001707740>{number = 9, name = (null)}
+异步提交到并行队列<NSThread: 0x600001752800>{number = 7, name = (null)}
+异步提交到并行队列<NSThread: 0x60000175ed00>{number = 10, name = (null)}
+异步提交到并行队列<NSThread: 0x60000173f9c0>{number = 11, name = (null)}
+异步提交到并行队列<NSThread: 0x600001771500>{number = 12, name = (null)}
+```
+
 
 
 ## 3.最终总结
@@ -236,11 +262,14 @@ let concurrentQueue = DispatchQueue(label: "com.example.concurrentQueue", attrib
 ​	2.  对于异步
 
 - ​	主队列
+
   - 主线程+主队列是**不会开启新线程**的（主队列上的任务一定是是主线程）:不会立即执行，放在主队列的末尾
   - 非主线程上+主队列上**也不会开新线程**（主队列上的任务一定是是主线程）：不会立即执行,最终在主线程上执行
+
 - 串行队列 开启一个新线程
-  - 
+
 - 并行队列 开启多个新线程
-  - 
+
+  
 
    
