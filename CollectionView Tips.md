@@ -18,7 +18,7 @@
 1. 注册：`register(_:forSupplementaryViewOfKind:withReuseIdentifier:)`
 2. 实现：继承`UICollectionReusableView`
 3. 创建实例：`collectionView(_:viewForSupplementaryElementOfKind:)`
-4. 设定尺寸:layout 的`headerReferenceSize`或
+4. 设定尺寸:layout 的`headerReferenceSize`或footerReferenceSize
 
 #### 1.注册 `header`或者 `footer` 的时候，kind 怎么写
 
@@ -63,7 +63,7 @@ if kind == UICollectionView.elementKindSectionHeader {
 
 ## 三 collectionview 使用 流式布局的 viewDelegate 用UICollectionViewDelegateFlowLayout
 
-不要使用UICollectionViewDelegate，而是继承UICollectionViewDelegate的UICollectionViewDelegateFlowLayout
+**不要使用UICollectionViewDelegate**，而是继承UICollectionViewDelegate的UICollectionViewDelegateFlowLayout
 
 获取item尺寸，collectionviewInset ，行间距，列间距，头尺寸，尾尺寸
 
