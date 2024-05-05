@@ -1,24 +1,18 @@
 ### 目录
 
-- Operation 分类
+- Operation 概述
 
-- 子类化Operation
+- 如何子类化Operation
 
-- 独立使用Operation
+- 单独使用 Operation（不常用）
 
-- OperationQueue概述
-
-- Operation和OperationQueue双剑合璧
-
-- NSOperation依赖
-
-- NSOperation优先级
+- Operation联合 OperationQueue 使用 实现多线程（常用）
 
   
 
-### NSOperation 分类
+### 一 Operation 概述
 
-NSOperatoin 是一个抽象基类，系统预置了两个子类
+**Operatoin** 是一个抽象基类，系统预置了两个子类
 
 **InvocationOperation**:启动一个由调用指定对象的选择器组成的操作,**在 swift 中这个 API 已经废弃了，因此不再使用**
 
@@ -26,11 +20,11 @@ NSOperatoin 是一个抽象基类，系统预置了两个子类
 
 当BlockOperation不能满足需求的时候，可以使用**子类化 的 Operation自定义 Operation**
 
-### 自定义Operation
+### 二 如何子类化Operation
 
 
 
-### 独立使用 Operation
+### 三 单独使用 Operation
 
 #### BlockOperation
 
