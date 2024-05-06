@@ -6,7 +6,7 @@
 
 - 单独使用 Operation（**不常用，意义不大**）
 
-- Operation联合 OperationQueue 使用 实现多线程（常用）
+- Operation联合 OperationQueue 使用 实现多线程（**常用**）
 
 - Operation的优先级
 
@@ -70,11 +70,81 @@ class SyncOperation: Operation {
 3. **执行任务，可以提交到 main 上执行 这一步并不是必须的。**
 4. 任务完成后，isExecuting标记为 false,isFinished标记为true.
 
-**isExecuting&isFinished**:
+**isExecuting&isFinished**:标记状态 的时候 需要1.对应 存储变量来记录状态 2.需要手动 kvo 来通知外部状态变更。 3.要使用递归锁保证线程安全
 
-**isConcurrent**:
+**isConcurrent**:返回 true 即可
 
+```swift
 
+class AsyncOperation: Operation {
+    
+    var _isExecuting: Bool = false
+    var _isFinished: Bool = false
+    var url:String?
+    var lock: NSRecursiveLock = NSRecursiveLock()
+    var image: UIImage?
+    
+    override var isExecuting: Bool {
+        get {
+            lock.lock()
+            let result = _isExecuting
+            lock.unlock()
+            return result
+        }
+        set {
+            lock.lock()
+            willChangeValue(forKey: "isExecuting")
+            _isExecuting = newValue
+            didChangeValue(forKey: "isExecuting")
+            lock.unlock()
+        }
+    }
+    
+    override var isFinished: Bool {
+        get {
+            lock.lock()
+            let result = _isFinished
+            lock.unlock()
+            return result
+        }
+        set {
+            lock.lock()
+            willChangeValue(forKey: "isFinished")
+            _isFinished = newValue
+            willChangeValue(forKey: "isFinished")
+            lock.unlock()
+        }
+    }
+    
+    override init() {
+        super.init()
+    }
+    
+    override func start() {
+        if isCancelled == true {
+            markCompletion()
+            return
+        }
+        
+        isExecuting = true
+        isFinished = false
+        guard let data = try? Data(contentsOf: URL(string: url ?? "")!) else {
+            markCompletion()
+
+            return
+        }
+        self.image = UIImage(data: data)
+        markCompletion()
+    }
+    
+    func markCompletion() {
+        isExecuting = false
+        isFinished = true
+        completionBlock?()
+    }
+}
+
+```
 
 
 
