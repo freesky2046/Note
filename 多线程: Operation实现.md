@@ -206,6 +206,11 @@ class AsyncOperation: Operation {
   使用后
   ```
 
+对于子类化 的 Operation，也是
+
+- 使用同步的子类  SyncOperation
+- 使用异步的子类 AsyncOperation
+
 
 
 ### 参考
