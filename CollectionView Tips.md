@@ -1,4 +1,4 @@
-# CollectionView Tips
+# CollectionView: Tips
 
 ## 零 目录
 
