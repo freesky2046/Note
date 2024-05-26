@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### 线程的生命周期
 
 - **新建**：实例化线程对象
@@ -10,32 +11,37 @@
 
 
 
-### 线程同步的策略
-
-GCD 线程同步有以下几种策略
-
-- `DispatchSemaphore`
-- Lock
-- 串行队列
-- Barrier
-- Dispatch Group
-
-
-
-### 线程同步
+### 线程同步的概念
 
 临界区: 需要保护的代码片段
 
 共享资源：多个线程都可以访问的全局变量
 
+
+
+### 线程同步的策略
+=======
+### 策略概述
+>>>>>>> parent of 2c4eda4 (补充)
+
+GCD 线程同步有以下几种策略
+
+- `DispatchSemaphore`
+<<<<<<< HEAD
+- Lock
+- 串行队列
+- Barrier
+- Dispatch Group
+=======
+>>>>>>> parent of 2c4eda4 (补充)
+
 ### DispatchSemaphore
 
-信号量有三个常用方法
 
-```swift
-semaphore = DispatchSemaphore(value: xx) 
-semaphore.singale()
 
+<<<<<<< HEAD
 ```
 
-在信号量>=0的时候，可以进行
+在信号量>=0的时候，可以进行下去，小于 0 的时候，线程
+=======
+>>>>>>> parent of 2c4eda4 (补充)

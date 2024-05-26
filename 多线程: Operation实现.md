@@ -18,7 +18,7 @@
 
 **Operatoin** 是一个抽象基类，系统预置了**两个子类**
 
-**InvocationOperation**:启动一个由调用指定对象的选择器组成的操作,**在 swift 中这个 API 已经废弃了，因此不再使用**
+**InvocationOperation**:启动一个由调用指定对象的选择器组成的操作,**~~在 swift 中这个 API 已经废弃了，因此不再使用~~**
 
 **BlockOperation**:管理一个或多个块的**并发**执行的操作
 
@@ -130,7 +130,6 @@ class AsyncOperation: Operation {
         isFinished = false
         guard let data = try? Data(contentsOf: URL(string: url ?? "")!) else {
             markCompletion()
-
             return
         }
         self.image = UIImage(data: data)
