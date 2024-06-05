@@ -75,7 +75,7 @@ apple叫这种能转为jsondata 的字典或数组叫JSONObject。JSONObject是�
 >
 > -    NSNumbers are not NaN or infinity
 
-转为 Dictionary
+转为 Dictionary或 Array
 
 ```swift
      guard let dict = try? JSONSerialization.jsonObject(with: data, options:[.mutableContainers] ) else { return }

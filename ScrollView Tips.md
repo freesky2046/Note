@@ -14,7 +14,7 @@
 
 滚动是改变可见区域在整个区域中的起点位置。
 
-所有的视图都有一个由view.bounds矩形表示的可见区域。UIScrollView类是一个具有独特属性的视图：它有一个比其边界更大的矩形，称为"content view"。因此，在滚动视图中：
+所有的视图都有一个**由view.bounds矩形表示的可见区域**。UIScrollView类是一个具有独特属性的视图：它有一个比其边界更大的矩形，称为"content view"。因此，在滚动视图中：
 
 可见区域是scrollView.bounds；
 总区域被称为content view，其大小为scrollView.contentSize；
