@@ -42,6 +42,7 @@ var contentOffset: CGPoint {
 
 - 不占用 contentsize 的空间
 - 会让 bounds.orign 为负数，即全部区域外添加了一个边框。坐标系原点还是在全部区域的左上角。
-- 让滑动的高度变高。 contentInset.top + contentInset.bottom + contentsize.height 是所有的可视区域高度
+- 让滑动的高度变高。 contentInset.top + contentInset.bottom + contentsize.height 是全部区域高度
 - 会让 bounds.orgin(offset)的初始化值为-contentInset.top
+- 注意 contentsize 不包含 contentInset
 - 可以理解为扩大了全部区域 
